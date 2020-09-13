@@ -1,0 +1,115 @@
+.side-panel {
+    background-color: #fff;
+    border-radius: .5rem;
+    height: 40rem;
+    padding: 0 1rem 0 1rem;
+    width: min-content;
+}
+
+.spacex-list {
+    margin-left: 1rem;
+    width: -webkit-fill-available;
+}
+
+.container {
+    padding: 1rem;
+    width: 100%;
+    min-height: 37rem;
+    background-color: #c8c8c8;
+}
+
+.inner-container {
+    display: flex;
+}
+
+@media screen and (max-width: 411px) {
+    .inner-container {
+        display: block;
+    }
+    .spacex-list{
+        padding-right: 2rem;
+        margin-left: -1rem;
+    }
+    .launching .landing {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .spacex-list{
+        padding-right: 2rem;
+    }
+}
+
+
+.SpaceX-container {
+    min-height: 20rem;
+    width: 10rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.years-list {
+    text-align: center;
+}
+
+.years-style {
+    background-color: #95ca59;
+    padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+    border-radius: 0.3rem;
+}
+
+.spacX-name {
+    font-weight: bold;
+    color: #2b1abf;
+    margin-bottom: 0.3rem;
+    width: 8rem;
+}
+
+.spacX-id {
+    margin-bottom: 0.3rem;
+}
+
+.spacX-year {
+    display: flex;
+    margin-bottom: 0.3rem;
+}
+
+.spacX-launch {
+    display: flex;
+    margin-bottom: 0.3rem;
+}
+
+.spacX-landing {
+    display: flex;
+    margin-bottom: 0.3rem;
+}
+.img-style {
+    text-align: center;
+    background-color: #c8c8c8;
+    height: 180px;
+}
+
+.filter {
+    font-weight: bold;
+}
+
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+a :hover{
+color: black !important;
+text-decoration: none !important;
+}
+
+.spacx-value {
+    color: blue;
+}
+
+.footer {
+    margin-left: auto;
+}

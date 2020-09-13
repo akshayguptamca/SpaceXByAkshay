@@ -1,0 +1,63 @@
+
+<html>
+    <body>
+        <div class="container">
+            <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "large" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+                <div style="display: flex;">
+                <h2>SpaceX Launch Program</h2>
+                <div class="footer"><b>Develop By:&nbsp;</b>Akshay Gupta</div>
+            </div>
+            <div class="inner-container">
+                <div class="side-panel">
+                    <div class="filter">Filters</div>
+                    <div style="text-align: center;padding: 0 3rem 0 3rem;">Launch Year</div>
+                    <hr style="width:100%;margin-bottom: 1rem;"/>
+                    <div class="row years-list">
+                            <div class="col-6" style="padding-bottom: 1rem;" *ngFor="let year of years">
+                                <span class="years-style"><a href="javascript:void(0);" (click) = "onSelectYear(year)">{{year}}</a></span>
+                            </div>
+                    </div>
+                    <div style="text-align: center;">Successfull Launch</div>
+                    <hr style="width:100%;margin-bottom: 1rem;"/>
+                    <div class="row launching">
+                        <div class="col-6" style="padding-bottom: 1rem;"><span class="years-style"><a href="javascript:void(0);" (click)="onLaunch(true)">True</a></span></div>
+                        <div class="col-6" style="padding-bottom: 1rem;"><span class="years-style"><a href="javascript:void(0);" (click)="onLaunch(false)">False</a></span></div>
+                    </div>
+
+                    <div style="text-align: center;">Successfull Landing</div>
+                    <hr style="width:100%;margin-bottom: 1rem;"/>
+                    <div class="row landing">
+                        <div class="col-6" style="padding-bottom: 1rem;"><span class="years-style"><a href="javascript:void(0);" (click)="onLand(true)">True</a></span></div>
+                        <div class="col-6" style="padding-bottom: 1rem;"><span class="years-style"><a href="javascript:void(0);" (click)="onLand(false)">False</a></span></div>
+                    </div>
+                </div>
+                <div class="row spacex-list">
+                    <div class="col-12 col-md-6 col-lg-3 SpaceX-container" *ngFor = "let spacX of spacXList">
+                        <div class="img-style">
+                            <img src="{{spacX.links.mission_patch}}" style="margin-top: 6%;" width="160" height="160">
+                        </div>
+                        <div class="spacX-name">{{spacX.mission_name}}</div>
+                        <div class="spacX-id">
+                            <div style="font-weight: bold;">Mission Id</div>
+                            <li *ngFor = "let mid of spacX.mission_id" class="spacx-value">{{mid}}</li>
+                        </div>
+                        <div class="spacX-year">
+                            <div style="font-weight: bold;width: 65%;">Launch Year : </div>
+                            <div class="spacx-value">{{spacX.launch_year}}</div>
+                        </div>
+                        <div class="spacX-launch">
+                            <div style="font-weight: bold;width: 65%;">Successfull Launch : </div>
+                            <div class="spacx-value">{{spacX.launch_success}}</div>
+                        </div>
+                        <div class="spacX-landing">
+                            <div style="font-weight: bold;width: 65%;">Successfull Landing : </div>
+                            <div class="spacx-value">{{spacX.rocket.first_stage.cores[0].land_success}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </body>
+</html>
+
+<router-outlet></router-outlet>
